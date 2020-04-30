@@ -5,7 +5,7 @@ Prototype the initial configuration options for a multi-user role-playing-game.
 """
 
 from saving import *
-from wolf import *  # Sample function: Prompts the user to pick a colour from a menu and returns the RGB code.
+import wolf  # Sample function: Prompts the user to pick a colour from a menu and returns the RGB code.
 
 __author__ = "Python Class"
 __date__ = "April 2020"
@@ -16,10 +16,29 @@ __version__ = 0.1
 filename = "game.cfg"
 settings = load(filename)
 show(settings)
+money = settings.get("money")
 
-# Sample Code (Player Flag Colour)
-flag = colour()
+# Main Menu
+choice = None
+while choice != "0":
+    print("\n\nCONFIGURATION MENU\n")
+    print("0) Exit and save configuration.")
+    print("1) Flag colour :", settings.get('flag'))  # Code by Wolf
+    print("2) Magic powers :", settings.get('power'))
+    print("3) Creature :", settings.get('creature'))
+    print("4) Buy weapon :", settings.get('weapon'))
+    print("\nMoney:", settings.get('money'))
+    choice = input("Enter menu choice (1-4): ")
+    if choice == "1":
+        flag = wolf.colour()
+    if choice == "4":
+        purchase = wolf.buy_weapon()
+        weapon = purchase(0)
+        money = money - purchase(1)
+        settings.update({"flag": flag})
+        settings.update({"weapon": weapon})
+        settings.update({"money", money})
 
 # Save Configuration File
-settings.update({"flag": flag})
 save(settings, filename)
+print("Goodbye! Configuration saved.")
