@@ -7,7 +7,7 @@ import json
 
 def show(settings):
     """Print configuration data."""
-    print("\n\nSAVED CONFIGURATION:\n")
+    print("\n\nDEBUG: SAVED CONFIGURATION:\n")
     if settings != {}:
         for setting, value in settings.items():
             print(setting, ":", value)
@@ -23,10 +23,11 @@ def load(filename):
         cfg.close()
         return settings
     except FileNotFoundError:
-        return {}
+        return {"money": 1000}
 
 
 def save(settings, filename):
     """Save configuration data to file."""
     cfg = open(filename, "w")
     json.dump(settings, cfg)
+
