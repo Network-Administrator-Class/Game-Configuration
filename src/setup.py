@@ -1,7 +1,7 @@
 #!/bin/env python3
 
 """
-Prototype the initial configuration options for a multi-user role-playing-game.
+Prototype of the initial configuration options for a multi-user role-playing-game.
 """
 
 from saving import *
