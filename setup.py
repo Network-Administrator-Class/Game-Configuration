@@ -31,13 +31,14 @@ while choice != "0":
     choice = input("Enter menu choice (1-4): ")
     if choice == "1":
         flag = wolf.colour()
+        settings.update({"flag": flag})
     if choice == "4":
         purchase = wolf.buy_weapon()
-        weapon = purchase(0)
-        money = money - purchase(1)
-        settings.update({"flag": flag})
+        weapon = purchase[0]
+        money = money - purchase[1]
+        print(weapon, money)
         settings.update({"weapon": weapon})
-        settings.update({"money", money})
+        settings.update({"money": money})
 
 # Save Configuration File
 save(settings, filename)
