@@ -6,7 +6,7 @@ Prototype of the initial configuration options for a multi-user role-playing-gam
 
 from saving import *
 import wolf  # Sample function: Prompts the user to pick a colour from a menu and returns the RGB code.
-
+import diarmuid # To get the classes of the user
 __author__ = "Python Class"
 __date__ = "April 2020"
 __credits__ = "Part of Skills Demo 3"
@@ -25,13 +25,16 @@ while choice != "0":
     print("0) Exit and save configuration.")
     print("1) Flag colour :", settings.get('flag'))  # Code by Wolf
     print("2) Magic powers :", settings.get('power'))
-    print("3) Creature :", settings.get('creature'))
+    print("3) Creature :", settings.get('creatures'))
     print("4) Buy weapon :", settings.get('weapon'))
     print("\nMoney:", settings.get('money'))
     choice = input("Enter menu choice (1-4): ")
     if choice == "1":
         flag = wolf.colour()
         settings.update({"flag": flag})
+    if choice == "3":
+        creatures = diarmuid.creatures()
+        settings.update({"creatures": creatures})
     if choice == "4":
         purchase = wolf.buy_weapon()
         weapon = purchase[0]
