@@ -34,6 +34,6 @@ def buy_weapon():
     while selection not in ["0", "1", "2"]:
         selection = input("Pick a weapon (1-2): ")
         if selection == "1":
-            return "Sword", 150
+            return {"Sword": 150}
         elif selection == "2":
-            return "Stick", 5
+            return {"Stick": 5}

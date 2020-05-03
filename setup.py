@@ -6,43 +6,86 @@ Prototype of the initial configuration options for a multi-user role-playing-gam
 
 from saving import *
 import wolf  # Sample function: Prompts the user to pick a colour from a menu and returns the RGB code.
-import diarmuid # To get the classes of the user
+import diarmuid  # To get the classes of the user
+import fearghals_functions
+import fearghal
+
 __author__ = "Python Class"
 __date__ = "April 2020"
 __credits__ = "Part of Skills Demo 3"
 __version__ = 0.1
 
-# Load Configuration File
-filename = "game.cfg"
-settings = load(filename)
-show(settings)
-money = settings.get("money")
 
+def main():
+    main_menu()
+
+
+def main_menu():
+    filename = "config.json"
+    settings = fearghals_functions.load(filename)
+    fearghals_functions.show()
+
+    if settings.get('money') is None:
+        money = 1000
+        fearghals_functions.append_settings({"money": money})
+
+    settings = fearghals_functions.load(filename)
+    money = settings.get('money')
+
+    choice = None
+    while choice != "0":
+        print("\n\nCONFIGURATION MENU\n")
+        print("0) Exit configuration.")
+        print("1) Flag colour :", settings.get('flag'))  # Code by Wolf
+        print("2) Magic powers :", settings.get('power'))
+        print("3) Creature :", settings.get('creatures'))
+        print("4) Buy weapon :", settings.get("weapon"))
+        print("5) Enter Options Menu")
+        print("\nMoney:", money)
+        choice = input("Enter menu choice (0 to 5): ")
+        if choice == "1":
+            flag = wolf.colour()
+            fearghals_functions.append_settings({"flag": flag})
+            settings = fearghals_functions.load(filename)
+        elif choice == "3":
+            creatures = diarmuid.creatures()
+            fearghals_functions.append_settings({'creatures': creatures})
+            settings = fearghals_functions.load(filename)
+        elif choice == "4":
+            purchase = wolf.buy_weapon()
+            if purchase.get("Sword") is not None:
+                weapon = purchase.get("Sword")
+            elif purchase.get("Stick") is not None:
+                weapon = purchase.get("Stick")
+
+            print("I have $", money, ", and the price for the weapon I have chosen is: $", weapon, sep="")  # Debug
+            money = money - weapon
+            print(weapon, money)
+            fearghals_functions.append_settings({"weapon": weapon})
+            fearghals_functions.append_settings({"money": money})
+            settings = fearghals_functions.load(filename)
+
+        elif choice == "5":
+            pass
+
+        elif choice == "0":
+            print("Configuration saved. Goodbye!")
+            exit()
+
+
+#
+# # Save Configuration File
+# save(settings, the_filename)
+# print("Goodbye! Configuration saved.")
+
+
+# # Load Configuration File
+# the_filename = "game.cfg"
+# settings = load(the_filename)
+# show(settings)
+# money = settings.get("money")
+#
 # Main Menu
-choice = None
-while choice != "0":
-    print("\n\nCONFIGURATION MENU\n")
-    print("0) Exit and save configuration.")
-    print("1) Flag colour :", settings.get('flag'))  # Code by Wolf
-    print("2) Magic powers :", settings.get('power'))
-    print("3) Creature :", settings.get('creatures'))
-    print("4) Buy weapon :", settings.get('weapon'))
-    print("\nMoney:", settings.get('money'))
-    choice = input("Enter menu choice (1-4): ")
-    if choice == "1":
-        flag = wolf.colour()
-        settings.update({"flag": flag})
-    if choice == "3":
-        creatures = diarmuid.creatures()
-        settings.update({"creatures": creatures})
-    if choice == "4":
-        purchase = wolf.buy_weapon()
-        weapon = purchase[0]
-        money = money - purchase[1]
-        print(weapon, money)
-        settings.update({"weapon": weapon})
-        settings.update({"money": money})
 
-# Save Configuration File
-save(settings, filename)
-print("Goodbye! Configuration saved.")
+if __name__ == "__main__":
+    main()

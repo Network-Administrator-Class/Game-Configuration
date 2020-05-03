@@ -1,7 +1,23 @@
 # !/bin/env python3
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+import diarmuid
+import wolf
 
-__author__ = "Fearghal Hayes"
-__date__ = "03/05/2020"
-__credits__ = "Me, and the other participants in the Skills Demo 3 for the Programming Module"
-__version__ = "0.0.1"
+
+def options():
+    print("\nAudio \n1) Gameplay\t\t2) Display\n3) Controls\t\t4)")
+    option = 0
+    while option not in ["1", "2", "3", "4", "5"]:
+        option = input("Please select a Main Menu option between 1 and 5:")
+        if option == "1":
+            return {"options": "audio"}
+        elif option == "2":
+            return {"options": "gameplay"}
+        elif option == "3":
+            return {"options": "display"}
+        elif option == "4":
+            print("Goodbye")
+            return {}
+        else:
+            print("Invalid option, please select an option from the list.")
