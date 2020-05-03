@@ -6,6 +6,7 @@ __date__ = "May 2020"
 __credits__ = "Part of Skills Demo 3"
 __version__ = 0.1
 
+
 def creatures():
     """
     Promps the user for there choice on the type of creature that the user wants to be
@@ -15,7 +16,7 @@ def creatures():
     print("\nClasses Menu \n1) Warrior\t\t2) Fighter\t\t3) Knight\n4) Paladin\t\t5) Barbarian\t6) Martial Artist\n7)"
           " Monk \t\t8)Berzerker ")
     selection = 0
-    while selection not in["1", "2", "3", "4", "5", "6", "7", "8"]:
+    while selection not in ["1", "2", "3", "4", "5", "6", "7", "8"]:
         selection = input("Please select a class between  (1-8): ")
         if selection == "1":
             return "Warrior"
