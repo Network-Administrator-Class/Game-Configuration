@@ -57,7 +57,8 @@ def main_menu():
                 weapon = purchase.get("Sword")
             elif purchase.get("Stick") is not None:
                 weapon = purchase.get("Stick")
-
+            elif purchase == {}:
+                weapon = 0
             print("I have $", money, ", and the price for the weapon I have chosen is: $", weapon, sep="")  # Debug
             money = money - weapon
             print(weapon, money)

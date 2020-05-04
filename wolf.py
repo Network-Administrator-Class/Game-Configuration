@@ -37,3 +37,5 @@ def buy_weapon():
             return {"Sword": 150}
         elif selection == "2":
             return {"Stick": 5}
+        elif selection == "0":
+            return {}

@@ -21,3 +21,7 @@ def options():
             return {}
         else:
             print("Invalid option, please select an option from the list.")
+
+
+if __name__ == "__main__":
+    print("HEY! Don't run me directly, I'm a module! I serve as a library for the setup.py file, run that instead.")
