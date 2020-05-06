@@ -8,6 +8,7 @@ from saving import *
 import wolf  # Sample function: Prompts the user to pick a colour from a menu and returns the RGB code.
 import diarmuid  # To get the classes of the user
 import fearghals_functions
+import brianr  # Screen resolution config.
 import fearghal
 
 __author__ = "Python Class"
@@ -67,7 +68,8 @@ def main_menu():
             settings = fearghals_functions.load(filename)
 
         elif choice == "5":
-            pass
+            resolution = brianr.screen_resolution()
+
 
         elif choice == "0":
             print("Configuration saved. Goodbye!")
