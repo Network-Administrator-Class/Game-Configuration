@@ -4,7 +4,7 @@
 Prototype of the initial configuration options for a multi-user role-playing-game.
 """
 
-from saving import *
+# from saving import *
 import wolf  # Sample function: Prompts the user to pick a colour from a menu and returns the RGB code.
 import diarmuid  # To get the classes of the user
 import fearghals_functions
@@ -68,8 +68,9 @@ def main_menu():
             settings = fearghals_functions.load(filename)
 
         elif choice == "5":
-            resolution = brianr.screen_resolution()
-
+            options = fearghal.options()
+            print(options)
+            fearghals_functions.append_settings(options)
 
         elif choice == "0":
             print("Configuration saved. Goodbye!")
