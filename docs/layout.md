@@ -25,7 +25,7 @@ Menu Name -> Sub-Menu Name (Description of the task to do)
 
 # Tips
 1. If you don't specify a return from any function, it returns None. 
-This is a problem for our program, as each function has to return a valid dictionary to use with the JSON file. 
+This is a problem for our program, as each menu function has to return a valid dictionary to use with the JSON file. 
 So if your menu function does not return anything, please return an empty dictionary, by 
 writing: <pre><code>return {}</code></pre>
 This will return an empty dictionary, which is what we want to do.
