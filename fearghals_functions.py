@@ -36,10 +36,10 @@ def show(filename="config.json"):  # CALL ME WHEN NEEDED!
     the_data = backend_load(filename)
 
     if the_data != {}:
-        print("You called fearghal's show function, the json data is: ", the_data)
+        print("You called the show function, the current json data is: ", the_data)
 
     elif the_data == {}:
-        print("You called fearghal's show function. The config file exists, but it is empty (i.e, \"{}\")")
+        print("You called the show function. The config file exists, but it is empty (i.e, \"{}\")")
 
 
 def initial_save(passed_settings, passed_filename="config.json"):
