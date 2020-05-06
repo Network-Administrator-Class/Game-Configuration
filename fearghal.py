@@ -9,7 +9,8 @@ def options():
           '1) Audio\n'
           '2) Gameplay\n'
           '3) Display\n'
-          '4) Controls\n')
+          '4) Controls\n'
+          '5) Exit\n')
 
     option = 0
     while option not in ["1", "2", "3", "4", "5"]:
@@ -20,11 +21,15 @@ def options():
             return {"options": "gameplay"}
         elif option == "3":
             the_display_menu = display()
+            the_options = {"options": [the_display_menu]}
             return the_display_menu
 
         elif option == "4":
+            return {}
+        elif option == "5":
             print("Goodbye")
             return {}
+
         else:
             print("Invalid option, please select an option from the list.")
 
@@ -36,7 +41,7 @@ def display():
           '3) Frame Rate Limit\n'
           '4) Vertical Sync\n'
           '5) Quality\n'
-          '6) Exit and Save\n')
+          '6) Exit\n')
 
     # print("\nResolution \n1) Video Mode\t\t2) Frame Rate Limit\n3) Vertical Sync\t\t4) Quality\t\t5)")
     the_display = 0
@@ -47,6 +52,14 @@ def display():
             display_list = {"display": [resolution]}
             return display_list
 
+        elif the_display == "2":
+            return {}
+        elif the_display == "3":
+            return {}
+        elif the_display == "4":
+            return {}
+        elif the_display == "5":
+            return {}
         elif the_display == "6":
             print("Goodbye")
             return {}
