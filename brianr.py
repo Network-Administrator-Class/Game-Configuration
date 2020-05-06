@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """
 Ask user for their choice of Screen Resolution setting!
 """
