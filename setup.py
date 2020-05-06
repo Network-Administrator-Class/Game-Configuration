@@ -62,7 +62,6 @@ def main_menu():
                 weapon = 0
             print("I have $", money, ", and the price for the weapon I have chosen is: $", weapon, sep="")  # Debug
             money = money - weapon
-            print(weapon, money)
             fearghals_functions.append_settings({"weapon": weapon})
             fearghals_functions.append_settings({"money": money})
             settings = fearghals_functions.load(filename)
