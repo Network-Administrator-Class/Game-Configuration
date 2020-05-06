@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
 """
 Ask user for their choice of Screen Resolution setting!
 """
+
 __author__ = "Brian Rudden"
 __date__ = "5th May 2020"
 __credits__ = "NET5 Programming and Design Principles 5N2927 - Skills Demo 3"
