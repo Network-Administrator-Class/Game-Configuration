@@ -36,4 +36,14 @@ def creatures():
             return "Martial Artist"
         elif selection == "9":
             return "wizard"
-
+def gender():
+    print("Enter 1 if your male:\nEnter 2 if your Female:\nEnter 3 if your Other: ")
+    selection = 0
+    while selection not in ["1", "2", "3"]:
+        selection = input("Please Enter your gender  (1-3): ")
+        if selection == "1":
+            return "Male"
+        elif selection == "2":
+            return "Female"
+        elif selection == "3":
+            return "Other"
