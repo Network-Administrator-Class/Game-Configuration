@@ -22,7 +22,7 @@ def framerate_limit():
           "7) Unlimited.\n")
     framerate_limit() = 0
     while framerate_limit not in ["1", "2", "3", "4", "5", "6", "7" ]:
-        framerate_limit = input("Please select a Screen Resolution choice between 1 and 4:\t")
+        framerate_limit = input("Please select a Frame Rate Limit choice between 1 and 7:\t")
         if framerate_limit == "1":
             return {"framerate_limit": "60 Fps"}
         elif framerate_limit == "2":
