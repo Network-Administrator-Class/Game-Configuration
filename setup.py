@@ -38,7 +38,7 @@ def main_menu():
         print("\n\nCONFIGURATION MENU\n")
         print("0) Exit configuration.")
         print("1) Flag colour :", settings.get('flag'))  # Code by Wolf
-        print("2) Magic powers :", settings.get('power'))
+        print("2) The gender  :", settings.get('gender'))
         print("3) Creature :", settings.get('creatures'))
         print("4) Buy weapon :", settings.get("weapon"))
         print("5) Enter Options Menu")
@@ -48,6 +48,11 @@ def main_menu():
             flag = wolf.colour()
             fearghals_functions.append_settings({"flag": flag})
             settings = fearghals_functions.load(filename)
+        elif choice == "2":
+            gender = diarmuid.gender()
+            fearghals_functions.append_settings({"gender": gender})
+            settings = fearghals_functions.load(filename)
+
         elif choice == "3":
             creatures = diarmuid.creatures()
             fearghals_functions.append_settings({'creatures': creatures})

@@ -14,10 +14,10 @@ def creatures():
     diarmuid , May 2020
     """
     print("\nClasses Menu \n1) Warrior\t\t2) Fighter\t\t3) Knight\n4) Paladin\t\t5) Barbarian\t6) Martial Artist\n7)"
-          " Monk \t\t8)Berzerker ")
+          " Monk \t\t8)Berzerker\t\t9)Wizard ")
     selection = 0
-    while selection not in ["1", "2", "3", "4", "5", "6", "7", "8"]:
-        selection = input("Please select a class between  (1-8): ")
+    while selection not in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+        selection = input("Please select a class between  (1-9): ")
         if selection == "1":
             return "Warrior"
         elif selection == "2":
@@ -34,5 +34,17 @@ def creatures():
             return "Monk"
         elif selection == "8":
             return "Martial Artist"
-        else:
-            print("")
+        elif selection == "9":
+            return "wizard"
+
+def gender():
+    print("Enter 1 if your male:\nEnter 2 if your Female:\nEnter 3 if your Other: ")
+    selection = 0
+    while selection not in ["1", "2", "3"]:
+        selection = input("Please Enter your gender  (1-3): ")
+        if selection == "1":
+            return "Male"
+        elif selection == "2":
+            return "Female"
+        elif selection == "3":
+            return "Other"
