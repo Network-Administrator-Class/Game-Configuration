@@ -20,6 +20,7 @@ def options():
         if option == "1":
             the_audio = Ben_audio.audio_options()
             audio = {"audio": [the_audio]}
+            return audio
 
         elif option == "2":
             pass
