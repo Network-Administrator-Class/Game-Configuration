@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import brianr
-import craig
+# import craig
+import Ben_audio
 
 
 def options():
@@ -17,12 +18,14 @@ def options():
     while option not in ["1", "2", "3", "4", "5"]:
         option = input("Please select a Main Menu option between 1 and 5: ")
         if option == "1":
-            return {"options": "audio"}
+            the_audio = Ben_audio.audio_options()
+            audio = {"audio": [the_audio]}
 
         elif option == "2":
-            the_gameplay = craig.gameplay()
-            the_gameplay = {"gameplay": [the_gameplay]}
-            return the_gameplay
+            pass
+            # the_gameplay = craig.gameplay()
+            # gameplay = {"gameplay": [the_gameplay]}
+            # return gameplay
 
         elif option == "3":
             the_display_menu = display()
