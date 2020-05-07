@@ -74,7 +74,7 @@ def backend_save(answers={}, filename="config.json"):  # DON'T CALL ME DIRECTLY!
     """"""
 
     with open(filename, "w") as target:
-        output = json.dump(answers, target)
+        output = json.dump(answers, target, indent=4, sort_keys=True)
         return output
 
 

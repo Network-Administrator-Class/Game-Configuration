@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import brianr
+import craig
 
 
 def options():
@@ -17,8 +18,12 @@ def options():
         option = input("Please select a Main Menu option between 1 and 5: ")
         if option == "1":
             return {"options": "audio"}
+
         elif option == "2":
-            return {"options": "gameplay"}
+            the_gameplay = craig.gameplay()
+            the_gameplay = {"gameplay": [the_gameplay]}
+            return the_gameplay
+
         elif option == "3":
             the_display_menu = display()
             the_options = {"options": [the_display_menu]}
@@ -45,7 +50,7 @@ def display():
 
     # print("\nResolution \n1) Video Mode\t\t2) Frame Rate Limit\n3) Vertical Sync\t\t4) Quality\t\t5)")
     the_display = 0
-    while the_display not in ["1", "2", "3", "4", "5"]:
+    while the_display not in ["1", "2", "3", "4", "5", "6"]:
         the_display = input("Please select a Main Menu option between 1 and 5: ")
         if the_display == "1":
             resolution = brianr.screen_resolution()
