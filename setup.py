@@ -79,8 +79,6 @@ def main_menu():
         elif choice == "0":
             print("Configuration saved. Goodbye!")
             exit()
-
-
 #
 # # Save Configuration File
 # save(settings, the_filename)
