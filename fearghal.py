@@ -4,6 +4,7 @@ from __future__ import print_function
 import brianr
 # import craig
 import Ben_audio
+import kolaczkowski
 
 
 def options():
@@ -19,8 +20,7 @@ def options():
         option = input("Please select a Main Menu option between 1 and 5: ")
         if option == "1":
             the_audio = Ben_audio.audio_options()
-            audio = {"audio": [the_audio]}
-            return audio
+            return the_audio
 
         elif option == "2":
             pass
@@ -30,7 +30,6 @@ def options():
 
         elif option == "3":
             the_display_menu = display()
-            the_options = {"options": [the_display_menu]}
             return the_display_menu
 
         elif option == "4":
@@ -58,13 +57,13 @@ def display():
         the_display = input("Please select a Main Menu option between 1 and 5: ")
         if the_display == "1":
             resolution = brianr.screen_resolution()
-            display_list = {"display": [resolution]}
-            return display_list
+            return resolution
 
         elif the_display == "2":
             return {}
         elif the_display == "3":
-            return {}
+            the_fps_limit = kolaczkowski.framerate_limit()
+            return the_fps_limit
         elif the_display == "4":
             return {}
         elif the_display == "5":
