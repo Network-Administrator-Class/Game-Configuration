@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import brianr
-# import craig
 import Ben_audio
 import kolaczkowski
+import craig
 
 
 def options():
@@ -23,10 +23,8 @@ def options():
             return the_audio
 
         elif option == "2":
-            pass
-            # the_gameplay = craig.gameplay()
-            # gameplay = {"gameplay": [the_gameplay]}
-            # return gameplay
+            the_gameplay = craig.gameplay()
+            return the_gameplay
 
         elif option == "3":
             the_display_menu = display()
