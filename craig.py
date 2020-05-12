@@ -109,3 +109,22 @@ def sensitivity():
         except ValueError:
             print("Error, please enter a valid number")
             continue
+
+
+def input_device():
+    print('\n\tInput device menu \n\n'
+          '1) Keyboard and mouse\n'
+          '2) Controller\n')
+
+    the_input_device = 0
+    while the_input_device not in ["1", "2"]:
+        the_input_device = input("Please select a input device keyboard or controller")
+
+        if the_input_device == "1":
+            return {"input_device": "keyboard"}
+
+        elif the_input_device == "2":
+            return {"input_device": "normal"}
+
+        else:
+            print("Invalid option, please select an option from the list.")
