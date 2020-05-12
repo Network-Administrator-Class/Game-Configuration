@@ -124,7 +124,7 @@ def input_device():
             return {"input_device": "keyboard"}
 
         elif the_input_device == "2":
-            return {"input_device": "normal"}
+            return {"input_device": "controller"}
 
         else:
             print("Invalid option, please select an option from the list.")
