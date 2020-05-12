@@ -17,7 +17,7 @@ def gameplay():
 
     user_choice = 0
     while user_choice not in ["1", "2", "3", "4", "5"]:
-        user_choice = input("Enter the setting in which you wish to change")
+        user_choice = input("Enter the setting in which you wish to change: ")
         if user_choice == "1":
             the_difficulty = difficulty()
             return the_difficulty
@@ -76,7 +76,7 @@ def fov():
 
     while the_fov >= 60 and the_fov <= 120:
         try:
-            the_temp_fov = int(input("Please input an FOV between 60 and 120:"))
+            the_temp_fov = int(input("Please input an FOV between 60 and 120: "))
 
             if the_temp_fov < 60 or the_temp_fov > 120:
                 print("Invalid option, please input an FOV between 60 and 120.")
@@ -97,7 +97,7 @@ def sensitivity():
 
     while the_sensitivity >= 1 and the_sensitivity <= 150:
         try:
-            the_temp_sensitivity = int(input("Please input a sensitivity between 1 and 150:"))
+            the_temp_sensitivity = int(input("Please input a sensitivity between 1 and 150: "))
 
             if the_temp_sensitivity < 1 or the_temp_sensitivity > 150:
                 print("Invalid option, please input a sensitivity between 1 and 150.")
@@ -118,7 +118,7 @@ def input_device():
 
     the_input_device = 0
     while the_input_device not in ["1", "2"]:
-        the_input_device = input("Please select a input device keyboard or controller")
+        the_input_device = input("Please select a input device keyboard or controller: ")
 
         if the_input_device == "1":
             return {"input_device": "keyboard"}
