@@ -25,7 +25,7 @@ result test 4: "resolution": "2160p"
 __author__ = "Brian Rudden"
 __date__ = "5th May 2020"
 __credits__ = "NET5 Programming and Design Principles 5N2927 - Skills Demo 3"
-__version__ = 0.2
+__version__ = 1.4
 
 
 def screen_resolution():
