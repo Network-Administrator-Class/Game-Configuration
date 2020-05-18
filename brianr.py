@@ -38,17 +38,17 @@ def screen_resolution():
           "1) 1280x720 — HD / 720p.\n"
           "2) 1920x1080 — FHD (Full HD) / 1080p.\n"
           "3) 2560x1440 — QHD/WQHD (Quad HD) / 1440p.\n"
-          "4) 3840x2160 — UHD (Ultra HD) / 4K 2160p\n")
+          "4) 3840x2160 — UHD (Ultra HD) / 4K 2160p\n")  # outputs choices of screen resolution for user
     resolution = 0
-    while resolution not in ["1", "2", "3", "4", ]:
+    while resolution not in ["1", "2", "3", "4", ]:  # loops until user inputs 1,2,3 or 4
         resolution = input("Please select a Screen Resolution choice between 1 and 4:\t")
         if resolution == "1":
-            return {"resolution": "720p"}
+            return {"resolution": "720p"}  # returns dictionary definition of resolution to be added to json file
         elif resolution == "2":
-            return {"resolution": "1080p"}
+            return {"resolution": "1080p"}  # returns dictionary definition of resolution to be added to json file
         elif resolution == "3":
-            return {"resolution": "1440p"}
+            return {"resolution": "1440p"}  # returns dictionary definition of resolution to be added to json file
         elif resolution == "4":
-            return {"resolution": "2160p"}
+            return {"resolution": "2160p"}  # returns dictionary definition of resolution to be added to json file
         else:
-            print("Please select a valid option from the list: 1,2,3 or 4!")
+            print("Please select a valid option from the list: 1,2,3 or 4!")  # asks user for valid input
