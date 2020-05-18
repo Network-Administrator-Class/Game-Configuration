@@ -2,6 +2,7 @@
 
 """
 Ask user for their choice of Screen Resolution setting!
+
 Algorithm:
 Step 1: Output choices to user 1 to 4
 Step 2: Request input to user for choices 1 to 4
