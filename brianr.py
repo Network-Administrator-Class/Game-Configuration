@@ -15,17 +15,19 @@ Test 1 : user choice input '1' to select "720p"
 Test 2 : user choice input '2' to select "1080p"
 Test 3 : user choice input '3' to select "1440p"
 Test 4 : user choice input '4' to select "2160p"
+Test 5 : user enters not valid inputs '5','6' and '9'
 
 result test 1: "resolution": "720p"
 result test 2: "resolution": "1080p"
 result test 3: "resolution": "1440p"
 result test 4: "resolution": "2160p"
+result test 5: "Please select a valid option from the list: 1,2,3 or 4!"
 """
 
 __author__ = "Brian Rudden"
 __date__ = "5th May 2020"
 __credits__ = "NET5 Programming and Design Principles 5N2927 - Skills Demo 3"
-__version__ = 1.4
+__version__ = 1.2
 
 
 def screen_resolution():
