@@ -12,8 +12,8 @@ step 6: if user input is a valid answer output the corresponding option to the j
 
 Testing:
 Test 1 : user choice input '1' to select "720p"
-Test 2 : user choice input '1' to select "1080p"
-Test 3 : user choice input '1' to select "1440p"
+Test 2 : user choice input '2' to select "1080p"
+Test 3 : user choice input '3' to select "1440p"
 Test 4 : user choice input '4' to select "2160p"
 
 result test 1: "resolution": "720p"
