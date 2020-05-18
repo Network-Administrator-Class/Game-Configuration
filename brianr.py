@@ -4,11 +4,11 @@
 Ask user for their choice of Screen Resolution setting!
 Algorithm:
 Step 1: Output choices to user 1 to 4
-step 2: Request input to user for choices 1 to 4
-step 3: if choice selection is not in 1 to 4
-step 4: ask user to input a valid answer
-step 5: loop steps 3 and 4 until a valid answer is inputted by the user
-step 6: if user input is a valid answer output the corresponding option to the json file.
+Step 2: Request input to user for choices 1 to 4
+Step 3: if choice selection is not in 1 to 4
+Step 4: ask user to input a valid answer
+Step 5: loop steps 3 and 4 until a valid answer is inputted by the user
+Step 6: if user input is a valid answer output the corresponding option to the json file.
 
 Testing:
 Test 1 : user choice input '1' to select "720p"
@@ -17,11 +17,11 @@ Test 3 : user choice input '3' to select "1440p"
 Test 4 : user choice input '4' to select "2160p"
 Test 5 : user enters not valid inputs '5','6' and '9'
 
-result test 1: "resolution": "720p"
-result test 2: "resolution": "1080p"
-result test 3: "resolution": "1440p"
-result test 4: "resolution": "2160p"
-result test 5: "Please select a valid option from the list: 1,2,3 or 4!"
+Result test 1: "resolution": "720p"
+Result test 2: "resolution": "1080p"
+Result test 3: "resolution": "1440p"
+Result test 4: "resolution": "2160p"
+Result test 5: "Please select a valid option from the list: 1,2,3 or 4!"
 """
 
 __author__ = "Brian Rudden"
