@@ -45,10 +45,6 @@ def show(filename="config.json"):  # CALL ME WHEN NEEDED!
         print("You called the show function. The config file exists, but it is empty (i.e, \"{}\")")
 
 
-def initial_save(passed_settings, passed_filename="config.json"):
-    return backend_save(passed_settings, passed_filename)
-
-
 def backend_load(filename="config.json", debug_level=None):  # DON'T CALL ME DIRECTLY!
     """Used for loading the filename, do not call this function, instead call the \"append_settings\" function,
     or the \"add_settings_to_start\" for either task. This function and the \"backend_save\" function are the
