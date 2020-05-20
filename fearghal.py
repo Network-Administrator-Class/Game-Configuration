@@ -5,6 +5,7 @@ import brianr
 import Ben_audio
 import kolaczkowski
 import craig
+import ade
 
 
 def options():
@@ -56,9 +57,9 @@ def display():
         if the_display == "1":
             resolution = brianr.screen_resolution()
             return resolution
-
         elif the_display == "2":
-            return {}
+            the_video_mode = ade.video_mode()
+            return the_video_mode
         elif the_display == "3":
             the_fps_limit = kolaczkowski.framerate_limit()
             return the_fps_limit
