@@ -10,6 +10,8 @@ import diarmuid  # To get the classes of the user
 import fearghals_functions
 import brianr  # Screen resolution config.
 import fearghal
+import cian
+
 
 __author__ = "Python Class"
 __date__ = "April 2020"
@@ -42,8 +44,9 @@ def main_menu():
         print("3) Creature :", settings.get('creatures'))
         print("4) Buy weapon :", settings.get("weapon"))
         print("5) Enter Options Menu")
+        print("6) Create account")
         print("\nMoney:", money)
-        choice = input("Enter menu choice (0 to 5): ")
+        choice = input("Enter menu choice (0 to 6): ")
         if choice == "1":
             flag = wolf.colour()
             fearghals_functions.append_settings({"flag": flag})
@@ -75,6 +78,10 @@ def main_menu():
             options = fearghal.options()
             print(options)
             fearghals_functions.append_settings(options)
+
+        elif choice == "6":
+            the_account = cian.account()
+            fearghals_functions.append_settings(the_account)
 
         elif choice == "0":
             print("Configuration saved. Goodbye!")
